@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b111c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Unbeatable Success Point — Staff Bell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Azeret+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b111c;
+  --bg-2:#0e1622;
+  --surface:#131c2b;
+  --surface-2:#1a2536;
+  --border:rgba(255,255,255,.09);
+  --border-strong:rgba(255,255,255,.16);
+  --text:#eef2f8;
+  --dim:#8b98ab;
+  --gold:#d4a73a;
+  --gold-soft:rgba(212,167,58,.13);
+  --crimson:#c0392b;
+  --crimson-soft:rgba(192,57,43,.14);
+  --green:#2f9e6f;
+  --green-soft:rgba(47,158,111,.14);
+  --shadow:0 18px 40px -18px rgba(0,0,0,.8);
+  --radius:18px;
+  --font-display:"Bricolage Grotesque",Georgia,serif;
+  --font-body:"Bricolage Grotesque","Segoe UI",sans-serif;
+  --font-mono:"Azeret Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f6f3ec;
+    --bg-2:#efeade;
+    --surface:#ffffff;
+    --surface-2:#f4efe4;
+    --border:rgba(20,25,40,.10);
+    --border-strong:rgba(20,25,40,.20);
+    --text:#101620;
+    --dim:#5b6473;
+    --gold:#8d6910;
+    --gold-soft:rgba(169,124,20,.12);
+    --crimson:#b03426;
+    --crimson-soft:rgba(176,52,38,.10);
+    --green:#1f7a55;
+    --green-soft:rgba(31,122,85,.10);
+    --shadow:0 18px 40px -22px rgba(20,25,40,.35);
+  }
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  font-family:var(--font-body);
+  background:
+    radial-gradient(900px 520px at 50% -12%, var(--gold-soft), transparent 70%),
+    linear-gradient(180deg,var(--bg-2),var(--bg) 40%);
+  background-attachment:fixed;
+  color:var(--text);
+  min-height:100dvh;
+  font-size:16px;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  overscroll-behavior-y:contain;
+}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:none;background:none}
+
+/* ---------- shell ---------- */
+.app{max-width:560px;margin:0 auto;padding:0 16px 108px;position:relative}
+
+header.top{padding:18px 0 10px}
+.brand-row{display:flex;align-items:flex-start;gap:12px}
+.crest{
+  width:46px;height:46px;flex:0 0 46px;border-radius:14px;
+  background:linear-gradient(150deg,var(--gold),#8a6413);
+  display:grid;place-items:center;color:#0b111c;
+  font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:-.5px;
+  box-shadow:0 8px 22px -10px rgba(212,167,58,.7);
+}
+.brand-text{min-width:0;flex:1}
+.brand-name{
+  font-family:var(--font-display);font-weight:800;font-size:19px;line-height:1.12;
+  letter-spacing:-.3px;text-transform:uppercase;margin:2px 0 3px;
+  overflow-wrap:break-word;
+}
+.brand-sub{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+.clock{
+  font-family:var(--font-mono);font-size:13px;font-weight:600;
+  padding:7px 10px;border:1px solid var(--border);border-radius:11px;
+  background:var(--surface);white-space:nowrap;
+}
+.next-strip{
+  margin-top:14px;display:flex;align-items:center;gap:9px;
+  padding:10px 13px;border:1px solid var(--border);border-radius:14px;
+  background:var(--surface);font-size:13px;
+}
+.next-strip .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex:0 0 8px}
+.next-strip b{font-weight:700}
+.next-strip .grow{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.next-strip .cd{font-family:var(--font-mono);font-size:12px;color:var(--dim)}
+
+/* ---------- cards ---------- */
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:16px;margin-bottom:14px;
+}
+.card--hero{
+  background:linear-gradient(165deg,var(--surface-2),var(--surface));
+  border-color:var(--border-strong);box-shadow:var(--shadow);
+}
+.section-label{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--dim);display:flex;align-items:center;gap:7px;margin:0 0 12px;
+}
+.section-label::before{content:"";width:6px;height:6px;border-radius:2px;background:var(--gold);display:block}
+h2{font-family:var(--font-display);font-size:17px;font-weight:700;margin:0 0 4px;letter-spacing:-.2px}
+
+/* ---------- forms ---------- */
+.field{margin-bottom:11px}
+.field label{display:block;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+input[type=text],input[type=tel],input[type=time],select{
+  width:100%;padding:12px 13px;border-radius:12px;
+  background:var(--bg);border:1px solid var(--border);color:var(--text);
+  font-size:16px;outline:none;transition:border-color .15s, box-shadow .15s;
+  appearance:none;
+}
+input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
+input::placeholder{color:var(--dim);opacity:.7}
+select{background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b98ab' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:12px 16px;border-radius:12px;font-weight:700;font-size:14.5px;
+  background:var(--surface-2);color:var(--text);border:1px solid var(--border);
+  transition:transform .1s, background .15s;
+  min-height:46px;
+}
+.btn:active{transform:scale(.975)}
+.btn--gold{background:linear-gradient(160deg,var(--gold),#b98d20);color:#0b111c;border-color:transparent;box-shadow:0 10px 24px -14px rgba(212,167,58,.9)}
+.btn--ghost{background:transparent}
+.btn--danger{background:var(--crimson-soft);color:#f3a79c;border-color:rgba(192,57,43,.35)}
+@media (prefers-color-scheme: light){.btn--danger{color:#8f2418}}
+.btn--full{width:100%}
+.btn--sm{padding:9px 12px;min-height:38px;font-size:13px;border-radius:10px}
+
+/* ---------- staff list ---------- */
+.staff-list{display:flex;flex-direction:column;gap:9px}
+.staff{
+  display:flex;align-items:center;gap:11px;padding:11px 12px;
+  background:var(--surface-2);border:1px solid var(--border);border-radius:14px;
+}
+.avatar{
+  width:38px;height:38px;flex:0 0 38px;border-radius:11px;display:grid;place-items:center;
+  background:var(--gold-soft);color:var(--gold);font-weight:800;font-size:15px;
+  font-family:var(--font-display);
+}
+.staff .meta{flex:1;min-width:0}
+.staff .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.25}
+.staff .rl{font-family:var(--font-mono);font-size:10px;color:var(--dim);letter-spacing:.05em;text-transform:uppercase;line-height:1.35;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.staff .ph{font-family:var(--font-mono);font-size:11px;color:var(--text);opacity:.72;letter-spacing:.02em;line-height:1.3}
+.staff .acts{display:flex;gap:5px;flex:0 0 auto}
+.icon-btn{
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+  background:var(--bg);border:1px solid var(--border);color:var(--dim);
+}
+.icon-btn:active{background:var(--surface)}
+.icon-btn.call{color:var(--green);border-color:var(--green-soft)}
+.icon-btn.wa{color:var(--gold);border-color:var(--gold-soft)}
+.icon-btn svg{width:15px;height:15px}
+.empty{
+  text-align:center;padding:26px 14px;color:var(--dim);font-size:13.5px;
+  border:1px dashed var(--border-strong);border-radius:14px;
+}
+
+/* ---------- ring panel ---------- */
+.ring-wrap{display:grid;place-items:center;padding:14px 0 6px;position:relative}
+.ring-btn{
+  width:190px;height:190px;border-radius:50%;
+  background:radial-gradient(circle at 35% 28%, #e35b4a, var(--crimson) 55%, #7d1f16);
+  color:#fff;display:grid;place-items:center;gap:2px;
+  box-shadow:0 22px 44px -18px rgba(192,57,43,.85), inset 0 -8px 22px rgba(0,0,0,.28), inset 0 6px 14px rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.18);
+  transition:transform .09s;
+  position:relative;z-index:2;
+}
+.ring-btn:active{transform:scale(.965)}
+.ring-btn .t1{font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:.02em;line-height:1}
+.ring-btn .t2{font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;opacity:.85;text-transform:uppercase}
+.ring-hint{text-align:center;font-size:12.5px;color:var(--dim);margin-top:14px;padding:0 10px}
+.opt-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+
+/* ---------- alarms ---------- */
+.alarm{
+  display:flex;align-items:center;gap:11px;padding:12px;
+  background:var(--surface-2);border:1px solid var(--border);border-radius:14px;margin-bottom:9px;
+}
+.alarm.off{opacity:.5}
+.alarm .tm{font-family:var(--font-mono);font-size:19px;font-weight:600;letter-spacing:-.5px}
+.alarm .meta{flex:1;min-width:0}
+.alarm .lbl{font-size:13.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.alarm .days{font-family:var(--font-mono);font-size:10px;color:var(--dim);letter-spacing:.08em;margin-top:2px}
+.switch{
+  width:46px;height:27px;flex:0 0 46px;border-radius:20px;background:var(--border-strong);
+  position:relative;transition:background .18s;
+}
+.switch::after{
+  content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;
+  background:#fff;transition:transform .18s;box-shadow:0 1px 3px rgba(0,0,0,.4);
+}
+.switch.on{background:var(--green)}
+.switch.on::after{transform:translateX(19px)}
+.daychips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{
+  padding:7px 0;border-radius:10px;border:1px solid var(--border);background:var(--bg);
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--dim);
+  flex:1;min-width:38px;text-align:center;
+}
+.chip.on{background:var(--gold-soft);border-color:var(--gold);color:var(--gold);font-weight:600}
+
+/* ---------- ring overlay ---------- */
+#overlay{
+  position:fixed;inset:0;z-index:900;display:none;
+  background:radial-gradient(circle at 50% 40%, #2a0d09, #100604 70%);
+  color:#fff;padding:26px 20px calc(26px + env(safe-area-inset-bottom));
+  flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  animation:flash 1s ease-in-out infinite;
+}
+#overlay.show{display:flex}
+@keyframes flash{
+  0%,100%{background-color:#100604}
+  50%{background-color:#3a0f0a}
+}
+.ov-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+.ov-title{
+  font-family:var(--font-display);font-size:23px;font-weight:800;text-transform:uppercase;
+  letter-spacing:-.4px;margin:10px 0 2px;max-width:340px;line-height:1.15;
+}
+.ov-sub{font-size:13.5px;opacity:.8;margin-bottom:6px}
+.pulse-ring{
+  width:150px;height:150px;border-radius:50%;margin:22px 0;
+  border:2px solid rgba(255,255,255,.35);display:grid;place-items:center;
+  animation:pulse 1.4s ease-out infinite;position:relative;
+}
+.pulse-ring::before,.pulse-ring::after{
+  content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.22);
+  animation:pulse 1.4s ease-out infinite;
+}
+.pulse-ring::after{animation-delay:.5s}
+@keyframes pulse{0%{transform:scale(.75);opacity:.9}100%{transform:scale(1.45);opacity:0}}
+.pulse-ring svg{width:56px;height:56px;opacity:.95;animation:sway 1.1s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-11deg)}50%{transform:rotate(11deg)}}
+.stop-btn{
+  margin-top:6px;padding:15px 44px;border-radius:50px;background:#fff;color:#8f2418;
+  font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:.04em;
+  box-shadow:0 14px 34px -12px rgba(0,0,0,.7);
+}
+.stop-btn:active{transform:scale(.97)}
+.ov-calls{margin-top:22px;width:100%;max-width:420px}
+.ov-calls .h{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;opacity:.6;margin-bottom:9px}
+.call-grid{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}
+.call-grid a{
+  padding:8px 12px;border-radius:11px;background:rgba(255,255,255,.13);
+  color:#fff;text-decoration:none;font-size:12.5px;font-weight:600;
+  border:1px solid rgba(255,255,255,.16);
+}
+.call-grid a:active{background:rgba(255,255,255,.24)}
+.ov-timer{font-family:var(--font-mono);font-size:12px;opacity:.55;margin-top:14px}
+
+/* ---------- nav ---------- */
+nav.tabs{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:color-mix(in srgb, var(--surface) 92%, transparent);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-top:1px solid var(--border);
+  padding:8px 8px calc(8px + env(safe-area-inset-bottom));
+}
+.tabs-inner{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:7px 2px;border-radius:12px;color:var(--dim);font-size:10px;
+  font-family:var(--font-mono);letter-spacing:.08em;text-transform:uppercase;
+}
+.tab svg{width:20px;height:20px}
+.tab.active{color:var(--gold);background:var(--gold-soft)}
+
+/* ---------- views ---------- */
+.view{display:none;animation:fadeUp .28s ease both}
+.view.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+.toast{
+  position:fixed;left:50%;bottom:96px;transform:translate(-50%,14px);
+  background:var(--text);color:var(--bg);padding:11px 18px;border-radius:30px;
+  font-size:13.5px;font-weight:600;z-index:1000;opacity:0;pointer-events:none;
+  transition:opacity .2s, transform .2s;box-shadow:0 12px 30px -12px rgba(0,0,0,.6);
+  max-width:88vw;text-align:center;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.note{
+  font-size:12.5px;color:var(--dim);line-height:1.5;
+  background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:11px 12px;
+}
+.note b{color:var(--text)}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13.5px}
+.kv:last-child{border-bottom:none}
+.kv span:first-child{color:var(--dim)}
+.kv span:last-child{font-weight:600;text-align:right;overflow-wrap:break-word;min-width:0}
+ol.steps{margin:0;padding-left:18px;font-size:13.5px;color:var(--dim);line-height:1.65}
+ol.steps b{color:var(--text)}
+
+/* ---------- inline form feedback + storage banner ---------- */
+.form-msg{
+  display:none;margin-top:10px;padding:10px 12px;border-radius:11px;
+  font-size:13px;font-weight:600;line-height:1.4;
+}
+.form-msg.show{display:block;animation:fadeUp .2s ease both}
+.form-msg.ok{background:var(--green-soft);color:var(--green);border:1px solid var(--green)}
+.form-msg.err{background:var(--crimson-soft);color:var(--crimson);border:1px solid rgba(192,57,43,.45)}
+.banner{
+  display:none;gap:9px;align-items:flex-start;margin-top:10px;
+  padding:11px 12px;border-radius:12px;font-size:12.5px;line-height:1.45;
+  background:var(--crimson-soft);border:1px solid rgba(192,57,43,.4);color:var(--text);
+}
+.banner svg{width:15px;height:15px;flex:0 0 15px;margin-top:2px;color:var(--crimson)}
+.banner b{color:var(--crimson)}
+.banner-body{flex:1;min-width:0}
+.banner-acts{display:flex;gap:8px;margin-top:9px}
+.banner-acts .btn{flex:0 0 auto;min-height:32px;padding:6px 12px;font-size:12px}
+
+/* ---------- self check ---------- */
+#checkOut{display:none;margin-top:10px}
+.check{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.4}
+.check:last-child{border-bottom:none}
+.check .flag{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.08em;padding:3px 6px;border-radius:5px;flex:0 0 auto;margin-top:1px}
+.check .yes{background:var(--green-soft);color:var(--green)}
+.check .no{background:var(--crimson-soft);color:var(--crimson)}
+.check b{font-weight:700;overflow-wrap:break-word;min-width:0}
+.ver{font-family:var(--font-mono);font-size:10.5px;color:var(--dim);letter-spacing:.1em;text-align:center;margin:14px 0 2px;text-transform:uppercase}
+.staff.flash{animation:flashRow 1.6s ease}
+@keyframes flashRow{0%,100%{background:var(--surface-2)}25%{background:var(--gold-soft);border-color:var(--gold)}}
+
+/* ---------- remote ring ---------- */
+.check-row{display:flex;align-items:center;gap:11px;margin-top:12px;padding:11px 12px;background:var(--surface-2);border:1px solid var(--border);border-radius:14px}
+.check-row .meta{flex:1;min-width:0}
+.check-row .nm{font-size:13.5px;font-weight:600}
+.check-row .rl{font-family:var(--font-mono);font-size:9.5px;color:var(--dim);letter-spacing:.05em;text-transform:uppercase;margin-top:2px}
+.net-line{display:flex;align-items:flex-start;gap:8px;margin-top:10px;font-size:12px;color:var(--dim);line-height:1.45}
+.net-dot{width:8px;height:8px;border-radius:50%;background:var(--dim);flex:0 0 8px;margin-top:4px}
+.net-dot.ok{background:var(--green)}
+.net-dot.err{background:var(--crimson)}
+.net-dot.busy{background:var(--gold);animation:blink 1s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.room-code{font-family:var(--font-mono);font-size:13px;font-weight:600;letter-spacing:.06em;word-break:break-all}
+
+/* ---------- devices / login ---------- */
+.device{background:var(--surface-2);border:1px solid var(--border);border-radius:14px;padding:11px 12px;margin-bottom:9px}
+.dev-top{display:flex;align-items:center;gap:11px}
+.dev-top .meta{flex:1;min-width:0}
+.dev-top .nm{font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dev-top .rl{font-family:var(--font-mono);font-size:9.5px;color:var(--dim);letter-spacing:.04em;margin-top:3px}
+.badge{display:inline-block;padding:2px 6px;border-radius:5px;font-size:9px;letter-spacing:.06em;text-transform:uppercase;margin-right:6px}
+.badge.ok{background:var(--green-soft);color:var(--green)}
+.badge.pending{background:var(--gold-soft);color:var(--gold)}
+.badge.blocked{background:var(--crimson-soft);color:var(--crimson)}
+.dev-acts{display:flex;gap:6px;margin-top:9px}
+.dev-acts .btn{flex:1;min-height:34px;font-size:12.5px;padding:7px 6px}
+</style>
+</head>
+<body>
+
+<noscript>
+  <div style="background:#c0392b;color:#fff;padding:14px 16px;font:600 14px/1.5 sans-serif;text-align:center">
+    Is page par JavaScript band hai, isliye staff add nahi hoga. Chrome me Settings &gt; Site settings &gt; JavaScript on karein, phir page refresh karein.
+  </div>
+</noscript>
+<div id="errBar" style="display:none;background:#c0392b;color:#fff;padding:10px 14px;font:600 12.5px/1.45 sans-serif;text-align:center"></div>
+
+<div class="app">
+  <header class="top">
+    <div class="brand-row">
+      <div class="crest">USP</div>
+      <div class="brand-text">
+        <div class="brand-sub">Staff Bell System</div>
+        <div class="brand-name" id="brandName">Unbeatable Success Point</div>
+      </div>
+      <div class="clock" id="clock">--:--</div>
+    </div>
+    <div class="next-strip">
+      <span class="dot" id="nextDot"></span>
+      <span class="grow" id="nextText">Koi alarm set nahi hai</span>
+      <span class="cd" id="nextCd"></span>
+    </div>
+    <div class="banner" id="storeWarn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+      <div class="banner-body">
+        <div id="storeWarnText"></div>
+        <div class="banner-acts">
+          <button class="btn btn--sm" id="warnBackup">Backup file</button>
+          <button class="btn btn--sm btn--ghost" id="warnClose">Theek hai</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= RING ================= -->
+  <section class="view active" id="view-ring">
+    <div class="card card--hero">
+      <div class="ring-wrap">
+        <button class="ring-btn" id="ringBtn" aria-label="Ring the bell">
+          <span class="t1">RING</span>
+          <span class="t2">Ek Click</span>
+        </button>
+      </div>
+      <div class="ring-hint">Dabate hi is phone par bell bajegi — neeche staff ko seedha call / WhatsApp bhi kar sakte hain.</div>
+    </div>
+
+    <div class="card" id="ringAllCard">
+      <p class="section-label">Sabke phone par bell</p>
+      <button class="btn btn--gold btn--full" id="ringAllBtn">RING ALL — approved phones par</button>
+      <div class="net-line"><span class="net-dot" id="netDot"></span><span id="remoteStatus">Room code ban raha hai…</span></div>
+      <div class="note" style="margin-top:10px">Sirf wahi phone bajenge jo aapne <b>Staff</b> tab me approve kiye hain. Ek teacher ko alag ring karni ho to Staff tab me uske naam ke saamne <b>Ring</b> dabayein.</div>
+    </div>
+
+    <div class="card" id="staffStatusCard" style="display:none">
+      <p class="section-label">Aapka connection</p>
+      <div class="net-line"><span class="net-dot" id="staffModeDot"></span><span id="staffModeText">—</span></div>
+      <div class="kv" style="margin-top:8px"><span>Naam</span><span id="staffModeName">—</span></div>
+      <div class="kv"><span>Room</span><span id="staffModeRoom">—</span></div>
+      <button class="btn btn--danger btn--full btn--sm" id="staffLogoutBtn" style="margin-top:10px">Logout</button>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Bell setting</p>
+      <div class="opt-grid">
+        <div class="field">
+          <label for="soundSel">Awaaz</label>
+          <select id="soundSel">
+            <option value="bell">School Bell</option>
+            <option value="siren">Siren</option>
+            <option value="buzzer">Buzzer</option>
+            <option value="alarm">Alarm Clock</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="durSel">Kitni der</label>
+          <select id="durSel">
+            <option value="10">10 second</option>
+            <option value="30" selected>30 second</option>
+            <option value="60">1 minute</option>
+            <option value="0">Jab tak band na karun</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn btn--ghost btn--full btn--sm" id="testBtn" style="margin-top:2px">Awaaz test karein</button>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Staff ko turant call</p>
+      <div id="quickCalls"></div>
+    </div>
+  </section>
+
+  <!-- ================= STAFF ================= -->
+  <section class="view" id="view-staff">
+    <div class="card" id="devicesCard">
+      <p class="section-label">Judе hue phones <span id="devCount" style="margin-left:auto;color:var(--gold)"></span></p>
+      <div id="deviceList"></div>
+    </div>
+
+    <div class="card card--hero">
+      <p class="section-label">Naya staff add karein</p>
+      <form id="staffForm" autocomplete="off">
+        <div class="field">
+          <label for="sName">Naam</label>
+          <input type="text" id="sName" placeholder="Jaise: Rakesh Sir" maxlength="40">
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label for="sRole">Role</label>
+            <select id="sRole">
+              <option>Teacher</option>
+              <option>Office Staff</option>
+              <option>Coordinator</option>
+              <option>Support Staff</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sPhone">Mobile <span style="text-transform:none;letter-spacing:0;opacity:.75">(optional)</span></label>
+            <input type="tel" id="sPhone" placeholder="10 digit" inputmode="numeric" maxlength="10">
+          </div>
+        </div>
+        <button class="btn btn--gold btn--full" type="button" id="staffSubmit">Staff add karein</button>
+        <div class="form-msg" id="staffMsg"></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Staff list <span id="staffCount" style="margin-left:auto;color:var(--gold)"></span></p>
+      <div class="staff-list" id="staffList"></div>
+    </div>
+  </section>
+
+  <!-- ================= SCHEDULE ================= -->
+  <section class="view" id="view-schedule">
+    <div class="card card--hero">
+      <p class="section-label">Naya alarm</p>
+      <form id="alarmForm" autocomplete="off">
+        <div class="row-2">
+          <div class="field">
+            <label for="aTime">Samay</label>
+            <input type="time" id="aTime" required>
+          </div>
+          <div class="field">
+            <label for="aSound">Awaaz</label>
+            <select id="aSound">
+              <option value="bell">School Bell</option>
+              <option value="siren">Siren</option>
+              <option value="buzzer">Buzzer</option>
+              <option value="alarm">Alarm Clock</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="aLabel">Naam (optional)</label>
+          <input type="text" id="aLabel" placeholder="Jaise: Morning Assembly" maxlength="30">
+        </div>
+        <div class="field">
+          <label>Din</label>
+          <div class="daychips" id="dayChips"></div>
+        </div>
+        <button class="btn btn--gold btn--full" type="submit">Alarm set karein</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Alarms</p>
+      <div id="alarmList"></div>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Dhyan rakhein</p>
+      <div class="note">
+        Alarm <b>isi phone</b> par bajega, jab app khula ho ya home-screen se chalu ho. Phone silent ho to awaaz nahi aayegi — media volume full rakhein aur phone ko charger par laga kar screen-on chhod dein. Staff ke apne phone par bell bajane ke liye wahi link unke phone me kholkar "Add to Home screen" karna hoga.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SETUP ================= -->
+  <section class="view" id="view-setup">
+    <div class="card">
+      <p class="section-label">Coaching ki detail</p>
+      <div class="field">
+        <label for="coachName">Coaching ka naam</label>
+        <input type="text" id="coachName" maxlength="48">
+      </div>
+      <button class="btn btn--gold btn--full" id="saveName">Naam save karein</button>
+    </div>
+
+    <div class="card" id="accessCard">
+      <p class="section-label">Staff access — sirf aapke paas</p>
+      <div class="kv"><span>Room code</span><span class="room-code" id="roomCode">—</span></div>
+      <div class="row-2" style="margin-top:10px">
+        <button class="btn btn--sm" id="copyLinkBtn">Code copy</button>
+        <button class="btn btn--sm" id="newRoomBtn">Naya code</button>
+      </div>
+      <div class="field" style="margin-top:12px">
+        <label for="pinInput">Join PIN (sirf staff ko batayein)</label>
+        <input type="tel" id="pinInput" placeholder="4 digit PIN" inputmode="numeric" maxlength="6">
+      </div>
+      <button class="btn btn--gold btn--full btn--sm" id="savePin">PIN save karein</button>
+      <div class="row-2" style="margin-top:8px">
+        <button class="btn btn--sm" id="testRemoteBtn">Server test</button>
+        <button class="btn btn--sm" id="bgAlertBtn">Background alert</button>
+      </div>
+      <div class="net-line"><span class="net-dot" id="netDot2"></span><span id="remoteStatus2">Server taiyar</span></div>
+    </div>
+
+    <div class="card" id="loginCard">
+      <p class="section-label">Teacher ke phone par login</p>
+      <div class="field">
+        <label for="loginName">Naam</label>
+        <input type="text" id="loginName" placeholder="Jaise: Rakesh Sir" maxlength="30">
+      </div>
+      <div class="row-2">
+        <div class="field">
+          <label for="loginRoom">Room code</label>
+          <input type="text" id="loginRoom" placeholder="usp-xxxxxxxx" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="field">
+          <label for="loginPin">PIN</label>
+          <input type="tel" id="loginPin" placeholder="PIN" inputmode="numeric" maxlength="6">
+        </div>
+      </div>
+      <button class="btn btn--gold btn--full btn--sm" id="loginBtn">Login karein</button>
+      <div class="form-msg" id="loginMsg"></div>
+      <div class="note" style="margin-top:10px">Login ke baad yeh phone aapki <b>approval</b> ka intezaar karega. Approve karne par hi is phone par bell bajegi — poora control aapke paas.</div>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Phone par install kaise karein</p>
+      <ol class="steps">
+        <li>Yeh file phone me <b>Chrome</b> me kholiye.</li>
+        <li>Upar right ke <b>⋮ menu</b> par tap karein.</li>
+        <li><b>"Add to Home screen"</b> chuniye — icon ban jayega.</li>
+        <li>Icon se app kholein, staff add karein, alarm set karein.</li>
+      </ol>
+      <div class="note" style="margin-top:12px">Notification ki permission de dein — alarm ke waqt phone par popup bhi aayega.</div>
+      <button class="btn btn--ghost btn--full btn--sm" id="notifBtn" style="margin-top:10px">Notification permission dein</button>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Kuch kaam na kare to</p>
+      <div class="note">Staff add nahi ho raha? Neeche <b>App check</b> dabayein. Yeh bata dega ki problem kahan hai — jo result aaye wo screenshot bhej dein.</div>
+      <button class="btn btn--ghost btn--full btn--sm" id="checkBtn" style="margin-top:10px">App check chalayein</button>
+      <div id="checkOut"></div>
+      <div class="ver" id="verLine">Build</div>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Backup</p>
+      <div class="kv"><span>Staff</span><span id="kStaff">0</span></div>
+      <div class="kv"><span>Alarms</span><span id="kAlarms">0</span></div>
+      <div class="kv"><span>Data</span><span id="kStore">Isi phone me save</span></div>
+      <div class="row-2" style="margin-top:12px">
+        <button class="btn btn--sm" id="exportBtn">Backup copy</button>
+        <button class="btn btn--sm" id="importBtn">Backup paste</button>
+      </div>
+      <div class="row-2" style="margin-top:8px">
+        <button class="btn btn--sm" id="dlBtn">Backup file</button>
+        <button class="btn btn--sm" id="upBtn">File se restore</button>
+      </div>
+      <input type="file" id="upFile" accept=".json,application/json" style="display:none">
+      <button class="btn btn--danger btn--full btn--sm" id="resetBtn" style="margin-top:10px">Sab data mita dein</button>
+    </div>
+  </section>
+</div>
+
+<!-- ================= RING OVERLAY ================= -->
+<div id="overlay" role="dialog" aria-modal="true" aria-label="Bell ringing">
+  <div class="ov-label">Staff Bell System</div>
+  <div class="ov-title" id="ovTitle">Staff Bell</div>
+  <div class="ov-sub" id="ovSub">Bell baj rahi hai</div>
+  <div class="pulse-ring">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+      <path d="M13.7 21a2 2 0 0 1-3.4 0"/>
+    </svg>
+  </div>
+  <button class="stop-btn" id="stopBtn">BAND KAREIN</button>
+  <div class="ov-timer" id="ovTimer"></div>
+  <div class="ov-calls">
+    <div class="h">STAFF — TAP TO CALL</div>
+    <div class="call-grid" id="ovCalls"></div>
+  </div>
+</div>
+
+<nav class="tabs">
+  <div class="tabs-inner">
+    <button class="tab active" data-view="ring">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      Bell
+    </button>
+    <button class="tab" data-view="staff">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+      Staff
+    </button>
+    <button class="tab" data-view="schedule">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      Time
+    </button>
+    <button class="tab" data-view="setup">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg>
+      Setup
+    </button>
+  </div>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   UNBEATABLE SUCCESS POINT — Staff Bell
+   Single file. No server. Data localStorage me.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  var DB_KEY = "usp_bell_v1";
+  var APP_VERSION = "6.0";
+  var lastError = "";
+
+  window.addEventListener("error", function (ev) {
+    lastError = (ev && ev.message) ? ev.message : "Unknown error";
+    var bar = document.getElementById("errBar");
+    if (bar) {
+      bar.style.display = "block";
+      bar.textContent = "App error: " + lastError + " — Setup > App check chalayein.";
+    }
+  });
+  window.addEventListener("unhandledrejection", function (ev) {
+    lastError = (ev && ev.reason) ? String(ev.reason) : "Promise error";
+  });
+  var DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  var state = {
+    coaching: "UNBEATABLE SUCCESS POINT",
+    staff: [],
+    alarms: [],
+    settings: { sound: "bell", duration: 30 },
+    room: "",
+    pin: "",
+    role: "owner",
+    devices: [],
+    myName: "",
+    myStatus: "none"
+  };
+
+  var editingStaffId = null;
+
+  /* ---------- storage: localStorage → sessionStorage → IndexedDB → memory ---------- */
+  var backend = null, storageMode = "local", idb = null, warnDismissed = false;
+
+  function pickBackend() {
+    var cands = [];
+    try { if (window.localStorage) cands.push({ s: window.localStorage, m: "local" }); } catch (e) {}
+    try { if (window.sessionStorage) cands.push({ s: window.sessionStorage, m: "session" }); } catch (e) {}
+    for (var i = 0; i < cands.length; i++) {
+      try {
+        cands[i].s.setItem("__usp_probe", "1");
+        cands[i].s.removeItem("__usp_probe");
+        backend = cands[i].s;
+        storageMode = cands[i].m;
+        return;
+      } catch (e) { /* band hai, agla try karo */ }
+    }
+    backend = null;
+    storageMode = "memory";
+  }
+
+  function idbSet(key, val) {
+    if (!idb) return;
+    try {
+      var tx = idb.transaction("kv", "readwrite");
+      tx.objectStore("kv").put(val, key);
+    } catch (e) { /* ignore */ }
+  }
+  function idbGet(key) {
+    return new Promise(function (res, rej) {
+      if (!idb) return rej(new Error("no idb"));
+      try {
+        var r = idb.transaction("kv").objectStore("kv").get(key);
+        r.onsuccess = function () { res(r.result || null); };
+        r.onerror = function () { rej(r.error); };
+      } catch (e) { rej(e); }
+    });
+  }
+
+  function applyData(d) {
+    if (!d || typeof d !== "object") return;
+    state.coaching = d.coaching || state.coaching;
+    state.staff = Array.isArray(d.staff) ? d.staff : [];
+    state.alarms = Array.isArray(d.alarms) ? d.alarms : [];
+    state.settings = Object.assign(state.settings, d.settings || {});
+    state.room = d.room || "";
+    state.pin = d.pin || "";
+    state.role = d.role === "staff" ? "staff" : "owner";
+    state.devices = Array.isArray(d.devices) ? d.devices : [];
+    state.myName = d.myName || "";
+    state.myStatus = d.myStatus || "none";
+  }
+
+  function load() {
+    var raw = null;
+    try { raw = backend ? backend.getItem(DB_KEY) : null; } catch (e) { raw = null; }
+    if (!raw) return false;
+    try { applyData(JSON.parse(raw)); return true; } catch (e) { return false; }
+  }
+
+  function save() {
+    var json = JSON.stringify(state);
+    var ok = false;
+    if (backend) {
+      try { backend.setItem(DB_KEY, json); ok = true; }
+      catch (e) { backend = null; }
+    }
+    if (idb) idbSet(DB_KEY, json);
+    if (!ok && idb) { ok = true; if (storageMode !== "local") storageMode = "idb"; }
+    if (!ok) storageMode = "memory";
+    else if (storageMode === "memory") storageMode = "idb";
+    showStoreWarn();
+    return ok;
+  }
+
+  // asli test: likh kar wapas padho — tabhi bharosa karein
+  function idbRoundTrip() {
+    return new Promise(function (res) {
+      if (!idb) return res(false);
+      var done = false;
+      var timer = setTimeout(function () { if (!done) { done = true; res(false); } }, 4000);
+      function finish(v) { if (!done) { done = true; clearTimeout(timer); res(v); } }
+      try {
+        var tx = idb.transaction("kv", "readwrite");
+        tx.objectStore("kv").put("1", "__probe");
+        tx.oncomplete = function () {
+          try {
+            var g = idb.transaction("kv").objectStore("kv").get("__probe");
+            g.onsuccess = function () { finish(g.result === "1"); };
+            g.onerror = function () { finish(false); };
+          } catch (e) { finish(false); }
+        };
+        tx.onerror = function () { finish(false); };
+        tx.onabort = function () { finish(false); };
+      } catch (e) { finish(false); }
+    });
+  }
+
+  function bootIdb() {
+    if (!window.indexedDB) return;
+    try {
+      var req = indexedDB.open("usp_bell_db", 1);
+      req.onupgradeneeded = function () {
+        try { req.result.createObjectStore("kv"); } catch (e) {}
+      };
+      req.onsuccess = function () {
+        idb = req.result;
+        if (storageMode === "local") { idbSet(DB_KEY, JSON.stringify(state)); return; }
+        idbRoundTrip().then(function (works) {
+          if (!works) { idb = null; showStoreWarn(); renderSetup(); return; }
+          idbGet(DB_KEY).then(function (raw) {
+            if (raw) {
+              try { applyData(JSON.parse(raw)); } catch (e) {}
+              renderAll();
+              applyRole();
+            }
+            if (!backend) storageMode = "idb";
+            save();
+            showStoreWarn();
+            renderSetup();
+          }).catch(function () { showStoreWarn(); renderSetup(); });
+        });
+      };
+      req.onerror = function () { /* kuch nahi */ };
+    } catch (e) { /* ignore */ }
+  }
+
+  function showStoreWarn() {
+    var box = document.getElementById("storeWarn");
+    if (!box) return;
+    if (storageMode === "local" || storageMode === "idb" || warnDismissed) {
+      box.style.display = "none";
+      return;
+    }
+    var why = "";
+    try {
+      if (window.top !== window.self) {
+        why = "Yeh <b>preview window</b> hai — isme browser data save nahi karta.";
+      } else if (location.protocol === "file:") {
+        why = "File seedha khuli hai (file://) — is mode me kuch browsers data nahi rakhte.";
+      } else if (location.protocol === "content:") {
+        why = "File content:// se khuli hai — Chrome me \"Open with\" se kholein.";
+      } else {
+        why = "Private / incognito mode me data save nahi hota.";
+      }
+    } catch (e) { why = "Is browser me data save nahi ho raha."; }
+    var t = document.getElementById("storeWarnText");
+    if (t) t.innerHTML = "<b>Data save nahi ho raha.</b> " + why +
+      (storageMode === "session" ? " Abhi kaam sirf isi session tak rahega." : "") +
+      " Kaam na jaye, isliye <b>backup file</b> le lein.";
+    box.style.display = "flex";
+  }
+
+  function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+
+  /* ---------- helpers ---------- */
+  var $ = function (s) { return document.querySelector(s); };
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  var toastTimer = null;
+  function toast(msg) {
+    var t = $("#toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2200);
+  }
+  function setMsg(sel, text, kind) {
+    var m = typeof sel === "string" ? document.querySelector(sel) : sel;
+    if (!m) return;
+    m.textContent = text;
+    m.className = "form-msg show " + (kind || "ok");
+    clearTimeout(m._msgTimer);
+    m._msgTimer = setTimeout(function () { m.className = "form-msg"; }, 5000);
+  }
+  function cleanPhone(v) {
+    var d = String(v || "").replace(/\D/g, "");
+    if (d.length > 10 && d.indexOf("91") === 0) d = d.slice(2);
+    return d.slice(0, 10);
+  }
+  function initials(name) {
+    var p = String(name || "").trim().split(/\s+/);
+    return ((p[0] || "?")[0] + (p[1] ? p[1][0] : "")).toUpperCase();
+  }
+
+  /* ============================================================
+     AUDIO ENGINE
+     ============================================================ */
+  var audio = { ctx: null, master: null, pumping: false, nextTime: 0, pumpTimer: null, stopTimer: null, vibTimer: null, active: false };
+
+  function getCtx() {
+    if (!audio.ctx) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      audio.ctx = new AC();
+    }
+    if (audio.ctx.state === "suspended") { audio.ctx.resume(); }
+    return audio.ctx;
+  }
+
+  function strike(ctx, dest, t, base, gain, decay) {
+    // metallic bell strike: a few inharmonic partials
+    var partials = [[1, 1], [2.01, 0.55], [3.02, 0.33], [4.21, 0.2], [5.43, 0.12], [6.8, 0.07]];
+    for (var i = 0; i < partials.length; i++) {
+      var o = ctx.createOscillator();
+      var g = ctx.createGain();
+      o.type = "sine";
+      o.frequency.value = base * partials[i][0];
+      var amp = gain * partials[i][1];
+      var d = decay * (1 - i * 0.1);
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(Math.max(amp, 0.0002), t + 0.006);
+      g.gain.exponentialRampToValueAtTime(0.0001, t + Math.max(d, 0.08));
+      o.connect(g); g.connect(dest);
+      o.start(t); o.stop(t + Math.max(d, 0.08) + 0.02);
+    }
+  }
+
+  function beep(ctx, dest, t, freq, dur, type, peak) {
+    var o = ctx.createOscillator();
+    var g = ctx.createGain();
+    o.type = type || "square";
+    o.frequency.setValueAtTime(freq, t);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(peak || 0.18, t + 0.008);
+    g.gain.setValueAtTime(peak || 0.18, t + Math.max(dur - 0.02, 0.02));
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    o.connect(g); g.connect(dest);
+    o.start(t); o.stop(t + dur + 0.02);
+  }
+
+  var PATTERNS = {
+    bell: {
+      period: 2.2,
+      play: function (ctx, dest, t) {
+        strike(ctx, dest, t, 784, 0.5, 1.6);
+        strike(ctx, dest, t + 0.42, 784, 0.34, 1.4);
+      }
+    },
+    siren: {
+      period: 1.8,
+      play: function (ctx, dest, t) {
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = "sawtooth";
+        o.frequency.setValueAtTime(520, t);
+        o.frequency.linearRampToValueAtTime(1150, t + 0.55);
+        o.frequency.linearRampToValueAtTime(520, t + 1.1);
+        o.frequency.linearRampToValueAtTime(1150, t + 1.6);
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(0.16, t + 0.05);
+        g.gain.setValueAtTime(0.16, t + 1.5);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + 1.75);
+        o.connect(g); g.connect(dest);
+        o.start(t); o.stop(t + 1.8);
+      }
+    },
+    buzzer: {
+      period: 1.2,
+      play: function (ctx, dest, t) {
+        for (var i = 0; i < 3; i++) beep(ctx, dest, t + i * 0.24, 220, 0.14, "square", 0.2);
+      }
+    },
+    alarm: {
+      period: 1.6,
+      play: function (ctx, dest, t) {
+        for (var i = 0; i < 4; i++) beep(ctx, dest, t + i * 0.19, 1046, 0.1, "square", 0.16);
+      }
+    }
+  };
+
+  function startRing(sound, seconds, title, sub) {
+    stopRing(true);
+    var ctx = getCtx();
+    if (!ctx) { toast("Is browser me awaaz support nahi hai"); return; }
+
+    audio.master = ctx.createGain();
+    audio.master.gain.value = 0.85;
+    audio.master.connect(ctx.destination);
+
+    var pat = PATTERNS[sound] || PATTERNS.bell;
+    audio.active = true;
+    audio.nextTime = ctx.currentTime + 0.08;
+
+    function pump() {
+      if (!audio.active) return;
+      var horizon = ctx.currentTime + 1.2;
+      var guard = 0;
+      while (audio.nextTime < horizon && guard < 24) {
+        try { pat.play(ctx, audio.master, audio.nextTime); } catch (e) { /* ignore */ }
+        audio.nextTime += pat.period;
+        guard++;
+      }
+      audio.pumpTimer = setTimeout(pump, 280);
+    }
+    pump();
+
+    // vibration loop
+    if (navigator.vibrate) {
+      var buzz = function () {
+        try { navigator.vibrate([500, 220, 500, 220, 500, 400]); } catch (e) {}
+      };
+      buzz();
+      audio.vibTimer = setInterval(buzz, 2600);
+    }
+
+    // overlay
+    $("#ovTitle").textContent = title || state.coaching;
+    $("#ovSub").textContent = sub || "Bell baj rahi hai — staff ko bhejein";
+    renderOvCalls();
+    $("#overlay").classList.add("show");
+
+    // timer / auto stop
+    var endAt = seconds > 0 ? Date.now() + seconds * 1000 : 0;
+    clearInterval(audio.tickTimer);
+    audio.tickTimer = setInterval(function () {
+      if (!audio.active) return;
+      if (endAt) {
+        var left = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
+        $("#ovTimer").textContent = left + "s";
+        if (left <= 0) stopRing();
+      } else {
+        $("#ovTimer").textContent = "∞";
+      }
+    }, 250);
+    $("#ovTimer").textContent = endAt ? seconds + "s" : "∞";
+
+    if (endAt) {
+      audio.stopTimer = setTimeout(function () { stopRing(); }, seconds * 1000);
+    }
+
+    // notification (works when app is in background on Android Chrome)
+    notify(title || state.coaching, sub || "Bell baj rahi hai");
+    requestWakeLock();
+  }
+
+  function stopRing(silent) {
+    audio.active = false;
+    clearTimeout(audio.pumpTimer);
+    clearTimeout(audio.stopTimer);
+    clearInterval(audio.vibTimer);
+    clearInterval(audio.tickTimer);
+    if (navigator.vibrate) { try { navigator.vibrate(0); } catch (e) {} }
+    if (audio.master && audio.ctx) {
+      try {
+        var m = audio.master;
+        m.gain.cancelScheduledValues(audio.ctx.currentTime);
+        m.gain.setValueAtTime(m.gain.value, audio.ctx.currentTime);
+        m.gain.exponentialRampToValueAtTime(0.0001, audio.ctx.currentTime + 0.15);
+        setTimeout(function () { try { m.disconnect(); } catch (e) {} }, 400);
+      } catch (e) { /* ignore */ }
+    }
+    audio.master = null;
+    if (!silent) {
+      $("#overlay").classList.remove("show");
+      releaseWakeLock();
+    }
+  }
+
+  /* ---------- notifications + wake lock ---------- */
+  function notify(title, body) {
+    try {
+      if (!("Notification" in window) || Notification.permission !== "granted") return;
+      if (document.visibilityState === "visible") return; // overlay is enough
+      new Notification(title, { body: body, tag: "usp-bell", renotify: true, requireInteraction: true });
+    } catch (e) { /* ignore */ }
+  }
+  var wakeLock = null;
+  function requestWakeLock() {
+    try {
+      if ("wakeLock" in navigator && !wakeLock) {
+        navigator.wakeLock.request("screen").then(function (l) {
+          wakeLock = l;
+          l.addEventListener("release", function () { wakeLock = null; });
+        }).catch(function () {});
+      }
+    } catch (e) { /* ignore */ }
+  }
+  function releaseWakeLock() {
+    try { if (wakeLock) { wakeLock.release(); wakeLock = null; } } catch (e) {}
+  }
+
+  /* ============================================================
+     STAFF
+     ============================================================ */
+  function renderStaff() {
+    var box = $("#staffList");
+    $("#staffCount").textContent = state.staff.length ? state.staff.length + " member" : "";
+    var kStaff = $("#kStaff");
+    if (kStaff) kStaff.textContent = state.staff.length;
+    if (!state.staff.length) {
+      box.innerHTML = '<div class="empty">Abhi koi staff add nahi hai.<br>Upar form se naam aur mobile daal kar add karein.</div>';
+      renderQuickCalls();
+      return;
+    }
+    box.innerHTML = state.staff.map(function (s) {
+      return '<div class="staff" data-id="' + s.id + '">' +
+        '<div class="avatar">' + esc(initials(s.name)) + '</div>' +
+        '<div class="meta"><div class="nm">' + esc(s.name) + '</div>' +
+        '<div class="rl">' + esc(s.role || "Staff") + '</div>' +
+        (s.phone ? '<div class="ph">' + esc(s.phone) + '</div>' : '') + '</div>' +
+        '<div class="acts">' +
+        (s.phone ? '<a class="icon-btn call" href="tel:+91' + esc(s.phone) + '" aria-label="Call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>' : '') +
+        (s.phone ? '<a class="icon-btn wa" href="https://wa.me/91' + esc(s.phone) + '" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-4-1L3 20l1.2-4.7a8.4 8.4 0 1 1 16.8-3.8z"/></svg></a>' : '') +
+        '<button class="icon-btn" data-act="edit" aria-label="Edit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>' +
+        '<button class="icon-btn" data-act="del" aria-label="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/></svg></button>' +
+        '</div></div>';
+    }).join("");
+    renderQuickCalls();
+  }
+
+  function renderQuickCalls() {
+    var withPhone = state.staff.filter(function (s) { return s.phone; });
+    var html = withPhone.length
+      ? withPhone.map(function (s) {
+          return '<a class="btn btn--sm" style="flex:1;min-width:120px" href="tel:+91' + esc(s.phone) + '">' +
+            '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>' +
+            esc(s.name.split(" ")[0]) + '</a>';
+        }).join("")
+      : '<div class="note">Staff add karein — phir yahan unke call buttons aa jayenge.</div>';
+    $("#quickCalls").innerHTML = '<div style="display:flex;gap:8px;flex-wrap:wrap">' + html + '</div>';
+  }
+
+  function renderOvCalls() {
+    var withPhone = state.staff.filter(function (s) { return s.phone; });
+    $("#ovCalls").innerHTML = withPhone.length
+      ? withPhone.map(function (s) {
+          return '<a href="tel:+91' + esc(s.phone) + '">' + esc(s.name) + '</a>';
+        }).join("")
+      : '<a href="#" onclick="return false" style="opacity:.6">Koi staff number nahi</a>';
+  }
+
+  function addStaff() {
+    var name = $("#sName").value.trim().replace(/\s+/g, " ");
+    var role = $("#sRole").value;
+    var phone = cleanPhone($("#sPhone").value);
+    var wasEditing = !!editingStaffId;
+
+    if (!name) {
+      setMsg("#staffMsg", "Naam likhna zaroori hai.", "err");
+      $("#sName").focus();
+      return;
+    }
+    if (phone && phone.length !== 10) {
+      setMsg("#staffMsg", "Mobile 10 digit ka likhein, ya khali chhod dein.", "err");
+      $("#sPhone").focus();
+      return;
+    }
+    var dup = state.staff.filter(function (x) {
+      return x.id !== editingStaffId && x.name.toLowerCase() === name.toLowerCase();
+    })[0];
+    if (dup) {
+      setMsg("#staffMsg", name + " pehle se list me hai. Badalna ho to pencil (edit) icon dabayein.", "err");
+      return;
+    }
+
+    if (wasEditing) {
+      var s = state.staff.filter(function (x) { return x.id === editingStaffId; })[0];
+      if (s) { s.name = name; s.role = role; s.phone = phone; }
+      editingStaffId = null;
+      $("#staffSubmit").textContent = "Staff add karein";
+    } else {
+      state.staff.push({ id: uid(), name: name, role: role, phone: phone });
+    }
+
+    var savedOk = save();
+    renderStaff();
+    $("#sName").value = "";
+    $("#sPhone").value = "";
+    if (!wasEditing && state.staff.length) flashRow(state.staff[state.staff.length - 1].id);
+
+    var msg = wasEditing
+      ? "\u2714 " + name + " ki detail update ho gayi."
+      : "\u2714 " + name + " save ho gaya \u2014 total " + state.staff.length + " staff.";
+    if (!savedOk) msg += " (Browser me permanent save nahi ho raha \u2014 Setup se backup file le lein.)";
+    setMsg("#staffMsg", msg, savedOk ? "ok" : "err");
+    if (!wasEditing) $("#sName").focus();
+  }
+
+  // dono raaste — button ka click aur form ka submit (Enter key)
+  $("#staffSubmit").addEventListener("click", function (e) {
+    e.preventDefault();
+    addStaff();
+  });
+  $("#staffForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    addStaff();
+  });
+
+  $("#sPhone").addEventListener("input", function () {
+    var v = this.value.replace(/\D/g, "").slice(0, 10);
+    if (v !== this.value) this.value = v;
+  });
+
+  $("#staffList").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-act]");
+    if (!btn) return;
+    var row = e.target.closest(".staff");
+    if (!row) return;
+    var id = row.getAttribute("data-id");
+    var s = state.staff.filter(function (x) { return x.id === id; })[0];
+    if (!s) return;
+
+    if (btn.getAttribute("data-act") === "del") {
+      if (confirm("'" + s.name + "' ko list se hata dein?")) {
+        state.staff = state.staff.filter(function (x) { return x.id !== id; });
+        save(); renderStaff(); toast("Hata diya");
+      }
+    } else {
+      editingStaffId = id;
+      $("#sName").value = s.name;
+      $("#sRole").value = s.role || "Teacher";
+      $("#sPhone").value = s.phone || "";
+      $("#staffSubmit").textContent = "Update karein";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+
+  /* ============================================================
+     ALARMS
+     ============================================================ */
+  var pickedDays = [1, 2, 3, 4, 5, 6]; // Mon..Sat default
+
+  function renderDayChips() {
+    $("#dayChips").innerHTML = DAY_NAMES.map(function (d, i) {
+      return '<button type="button" class="chip' + (pickedDays.indexOf(i) >= 0 ? " on" : "") + '" data-day="' + i + '">' + d + '</button>';
+    }).join("");
+  }
+  $("#dayChips").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-day]");
+    if (!b) return;
+    var d = parseInt(b.getAttribute("data-day"), 10);
+    var idx = pickedDays.indexOf(d);
+    if (idx >= 0) pickedDays.splice(idx, 1); else pickedDays.push(d);
+    renderDayChips();
+  });
+
+  function renderAlarms() {
+    var box = $("#alarmList");
+    if (!state.alarms.length) {
+      box.innerHTML = '<div class="empty">Koi alarm nahi. Upar time chun kar set karein.</div>';
+      updateNextStrip();
+      return;
+    }
+    var sorted = state.alarms.slice().sort(function (a, b) { return a.time.localeCompare(b.time); });
+    box.innerHTML = sorted.map(function (a) {
+      var days = a.days && a.days.length ? a.days.slice().sort().map(function (d) { return DAY_NAMES[d]; }).join(" ") : "Roz";
+      return '<div class="alarm' + (a.on ? "" : " off") + '" data-id="' + a.id + '">' +
+        '<div class="tm">' + esc(a.time) + '</div>' +
+        '<div class="meta"><div class="lbl">' + esc(a.label || "Staff Bell") + '</div>' +
+        '<div class="days">' + esc(days) + '</div></div>' +
+        '<button class="switch' + (a.on ? " on" : "") + '" data-act="toggle" aria-label="Toggle"></button>' +
+        '<button class="icon-btn" data-act="del" aria-label="Delete"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/></svg></button>' +
+        '</div>';
+    }).join("");
+    updateNextStrip();
+  }
+
+  $("#alarmForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var time = $("#aTime").value;
+    if (!time) { toast("Samay chunein"); return; }
+    if (!pickedDays.length) { toast("Kam se kam ek din chunein"); return; }
+    state.alarms.push({
+      id: uid(), time: time, label: $("#aLabel").value.trim() || "Staff Bell",
+      sound: $("#aSound").value, days: pickedDays.slice(), on: true, dur: 30
+    });
+    save(); renderAlarms();
+    $("#aLabel").value = "";
+    toast("Alarm set: " + time);
+  });
+
+  $("#alarmList").addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-act]");
+    if (!btn) return;
+    var row = e.target.closest(".alarm");
+    var id = row.getAttribute("data-id");
+    var a = state.alarms.filter(function (x) { return x.id === id; })[0];
+    if (!a) return;
+    if (btn.getAttribute("data-act") === "toggle") {
+      a.on = !a.on; save(); renderAlarms();
+    } else {
+      state.alarms = state.alarms.filter(function (x) { return x.id !== id; });
+      save(); renderAlarms(); toast("Alarm hata diya");
+    }
+  });
+
+  /* ---------- next alarm ---------- */
+  function nextOccurrence() {
+    var best = null;
+    var now = new Date();
+    state.alarms.forEach(function (a) {
+      if (!a.on) return;
+      var parts = a.time.split(":");
+      var hh = parseInt(parts[0], 10), mm = parseInt(parts[1], 10);
+      for (var k = 0; k < 8; k++) {
+        var d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + k, hh, mm, 0, 0);
+        var days = a.days && a.days.length ? a.days : [0, 1, 2, 3, 4, 5, 6];
+        if (days.indexOf(d.getDay()) < 0) continue;
+        if (d.getTime() <= now.getTime() + 500) continue;
+        if (!best || d < best.when) best = { when: d, alarm: a };
+        break;
+      }
+    });
+    return best;
+  }
+
+  function updateNextStrip() {
+    var n = nextOccurrence();
+    if (!n) {
+      $("#nextText").textContent = "Koi alarm set nahi hai";
+      $("#nextCd").textContent = "";
+      $("#nextDot").style.background = "var(--dim)";
+      return;
+    }
+    var sameDay = n.when.toDateString() === new Date().toDateString();
+    var t = pad(n.when.getHours()) + ":" + pad(n.when.getMinutes());
+    $("#nextText").innerHTML = "<b>" + esc(t) + "</b> · " + esc(n.alarm.label) +
+      (sameDay ? " · aaj" : " · " + DAY_NAMES[n.when.getDay()]);
+    $("#nextDot").style.background = "var(--green)";
+    var mins = Math.round((n.when - Date.now()) / 60000);
+    $("#nextCd").textContent = mins < 60 ? "in " + mins + "m" : "in " + Math.floor(mins / 60) + "h " + (mins % 60) + "m";
+  }
+
+  /* ---------- alarm engine ---------- */
+  var firedKeys = {};
+  function checkAlarms() {
+    var now = new Date();
+    var key = now.toDateString() + " " + pad(now.getHours()) + ":" + pad(now.getMinutes());
+    var hhmm = pad(now.getHours()) + ":" + pad(now.getMinutes());
+    state.alarms.forEach(function (a) {
+      if (!a.on) return;
+      if (a.time !== hhmm) return;
+      var days = a.days && a.days.length ? a.days : [0, 1, 2, 3, 4, 5, 6];
+      if (days.indexOf(now.getDay()) < 0) return;
+      var k = a.id + "|" + key;
+      if (firedKeys[k]) return;
+      firedKeys[k] = true;
+      startRing(a.sound || "bell", a.dur || 30, a.label || state.coaching, "Aaj ka bell — " + a.time);
+    });
+  }
+
+  /* ============================================================
+     SERVER CONNECT — login, approval, targeted ring (ntfy.sh)
+     Owner: phones approve karta hai + ring bhejta hai
+     Staff: login karke connected rehta hai, sirf approved hone par bajta hai
+     ============================================================ */
+  var NTFY = "https://ntfy.sh";
+  var POLL_MS = 8000;
+  var pollTimer = null, pollSince = 0, pollBusy = false, lastRingTs = 0;
+
+  function devId() {
+    var id = "";
+    try { id = localStorage.getItem("usp_dev_id") || ""; } catch (e) {}
+    if (!id) {
+      id = "d" + Math.random().toString(36).slice(2, 10);
+      try { localStorage.setItem("usp_dev_id", id); } catch (e) {}
+    }
+    return id;
+  }
+
+  function makeRoom() {
+    var chars = "abcdefghijkmnpqrstuvwxyz23456789", out = "";
+    for (var i = 0; i < 8; i++) out += chars.charAt(Math.floor(Math.random() * chars.length));
+    return "usp-" + out;
+  }
+  function ensureRoom() {
+    if (!state.room) { state.room = makeRoom(); save(); }
+    return state.room;
+  }
+  function staffLink() {
+    ensureRoom();
+    if (location.protocol === "file:" || !location.origin || location.origin === "null") return state.room;
+    return location.origin + location.pathname + "?room=" + encodeURIComponent(state.room);
+  }
+
+  function send(msg) {
+    ensureRoom();
+    return fetch(NTFY + "/" + encodeURIComponent(state.room), {
+      method: "POST",
+      body: msg,
+      headers: { "Title": state.coaching }
+    }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return true;
+    });
+  }
+
+  function setNet(kind, text) {
+    var cls = kind === "ok" ? "ok" : (kind === "err" ? "err" : (kind === "busy" ? "busy" : ""));
+    ["netDot", "netDot2"].forEach(function (id) {
+      var d = document.getElementById(id);
+      if (d) d.className = "net-dot " + cls;
+    });
+    var a1 = document.getElementById("remoteStatus"), a2 = document.getElementById("remoteStatus2");
+    if (a1) a1.textContent = text;
+    if (a2) a2.textContent = text;
+  }
+
+  function ago(ts) {
+    var m = Math.round((Date.now() - ts) / 60000);
+    if (m < 1) return "abhi";
+    if (m < 60) return m + " min pehle";
+    return Math.round(m / 60) + " ghante pehle";
+  }
+
+  function findDevice(id) {
+    for (var i = 0; i < state.devices.length; i++) if (state.devices[i].id === id) return state.devices[i];
+    return null;
+  }
+  function upsertDevice(id, name, status) {
+    var d = findDevice(id);
+    if (!d) {
+      d = { id: id, name: name || "Staff", status: status || "pending", lastSeen: Date.now() };
+      state.devices.push(d);
+    } else {
+      if (name) d.name = name;
+      if (status && d.status !== "blocked") d.status = status;
+      d.lastSeen = Date.now();
+    }
+    save();
+    renderDevices();
+  }
+
+  function handleMsg(m) {
+    if (!m || m.event !== "message" || !m.message) return;
+    if (m.time && m.time > pollSince) pollSince = m.time;
+    var parts = String(m.message).trim().split(/\s+/);
+    var cmd = parts[0];
+
+    if (state.role === "owner") {
+      if (cmd === "JOIN") {
+        var pin = parts[1] || "-";
+        var id = parts[2] || "";
+        var nm = parts.slice(3).join(" ").replace(/_/g, " ") || "Staff";
+        if (!id) return;
+        if (state.pin && pin !== state.pin) return;   // galat PIN — chup-chaap ignore
+        upsertDevice(id, nm, "pending");
+      } else if (cmd === "PING") {
+        var d = findDevice(parts[1]);
+        if (d) { d.lastSeen = Date.now(); save(); renderDevices(); }
+      } else if (cmd === "BYE") {
+        state.devices = state.devices.filter(function (x) { return x.id !== parts[1]; });
+        save(); renderDevices();
+      }
+      return;
+    }
+
+    // ---- staff device ----
+    var my = devId();
+    if (cmd === "OK" && parts[1] === my) {
+      state.myStatus = "ok"; save(); renderStaffMode();
+      toast("Owner ne approve kar diya — ab bell bajegi");
+    } else if (cmd === "BLOCK" && parts[1] === my) {
+      state.myStatus = "blocked"; save(); renderStaffMode();
+      toast("Access band kar diya gaya");
+    } else if (cmd === "RING") {
+      var ts = parseInt(parts[1], 10) || 0;
+      var target = parts[2] || "all";
+      if (state.myStatus !== "ok") return;
+      if (target !== "all" && target !== my) return;
+      if (ts > lastRingTs) {
+        lastRingTs = ts;
+        if (!audio.active) startRing(state.settings.sound || "bell", 30, state.coaching, "Coaching se bell aayi");
+      }
+    }
+  }
+
+  function stopPolling() { if (pollTimer) { clearInterval(pollTimer); pollTimer = null; } }
+
+  function startPolling() {
+    stopPolling();
+    if (!state.room) return;
+    pollSince = Math.floor(Date.now() / 1000);
+    pollOnce();
+    pollTimer = setInterval(pollOnce, POLL_MS);
+  }
+
+  function pollOnce() {
+    if (!state.room || pollBusy) return;
+    pollBusy = true;
+    fetch(NTFY + "/" + encodeURIComponent(state.room) + "/json?poll=1&since=" + pollSince, { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.text();
+      })
+      .then(function (txt) {
+        pollBusy = false;
+        setNet("ok", (state.role === "staff" ? "Connected · " : "Server se juda · ") + state.room);
+        var lines = txt.split("\n");
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i].trim();
+          if (!line) continue;
+          var m = null;
+          try { m = JSON.parse(line); } catch (e) { continue; }
+          handleMsg(m);
+        }
+      })
+      .catch(function (e) {
+        pollBusy = false;
+        setNet("err", "Server se connection nahi (" + e.message + ")");
+      });
+  }
+
+  function ping() {
+    if (state.role !== "staff" || state.myStatus !== "ok") return;
+    send("PING " + devId()).catch(function () {});
+  }
+
+  /* ---- owner actions ---- */
+  function ringAllDevices() {
+    var ok = state.devices.filter(function (d) { return d.status === "ok"; });
+    if (!ok.length) { toast("Pehle kisi phone ko approve karein"); return; }
+    setNet("busy", "Sabke phone par bhej rahe hain…");
+    send("RING " + Date.now() + " all").then(function () {
+      setNet("ok", "Bhej diya · " + ok.length + " phone · " + new Date().toLocaleTimeString("en-GB"));
+      toast("Ring bhej di — " + ok.length + " phone");
+    }).catch(function (e) {
+      setNet("err", "Bhejne me dikkat (" + e.message + ")");
+    });
+  }
+  function ringOneDevice(id) {
+    setNet("busy", "Bhej rahe hain…");
+    send("RING " + Date.now() + " " + id).then(function () {
+      setNet("ok", "Ek phone par ring bheji · " + new Date().toLocaleTimeString("en-GB"));
+      toast("Ring bhej di");
+    }).catch(function (e) {
+      setNet("err", "Bhejne me dikkat (" + e.message + ")");
+    });
+  }
+  function approveDevice(id) {
+    send("OK " + id).then(function () {
+      var d = findDevice(id);
+      if (d) { d.status = "ok"; save(); renderDevices(); }
+      toast("Approve ho gaya");
+    }).catch(function () { toast("Approve nahi hua — internet check karein"); });
+  }
+  function blockDevice(id) {
+    send("BLOCK " + id).then(function () {
+      var d = findDevice(id);
+      if (d) { d.status = "blocked"; save(); renderDevices(); }
+      toast("Block kar diya");
+    }).catch(function () { toast("Block nahi hua"); });
+  }
+
+  /* ---- staff actions ---- */
+  function staffLogin() {
+    var name = (document.getElementById("loginName").value || "").trim();
+    var room = (document.getElementById("loginRoom").value || "").trim().toLowerCase();
+    var pin = (document.getElementById("loginPin").value || "").trim();
+    if (!name) { setMsg("#loginMsg", "Naam likhein.", "err"); return; }
+    if (!/^[a-z0-9_-]{3,40}$/.test(room)) { setMsg("#loginMsg", "Room code theek nahi hai (jaise usp-ab12cd34).", "err"); return; }
+
+    state.room = room;
+    state.pin = pin;
+    state.role = "staff";
+    state.myName = name;
+    state.myStatus = "pending";
+    save();
+
+    send("JOIN " + (pin || "-") + " " + devId() + " " + name.replace(/\s+/g, "_"))
+      .then(function () { setMsg("#loginMsg", "Login ho gaya — owner ki approval ka intezaar.", "ok"); })
+      .catch(function (e) { setMsg("#loginMsg", "Server se connect nahi hua (" + e.message + ")", "err"); });
+
+    applyRole();
+    startPolling();
+  }
+  function staffLogout() {
+    try { send("BYE " + devId()); } catch (e) {}
+    state.role = "owner";
+    state.myStatus = "none";
+    state.myName = "";
+    save();
+    applyRole();
+    toast("Logout ho gaya");
+  }
+
+  /* ---- UI ---- */
+  function renderDevices() {
+    var box = document.getElementById("deviceList");
+    if (!box) return;
+    var n = state.devices.length;
+    var dc = document.getElementById("devCount");
+    if (dc) dc.textContent = n ? n + " phone" : "";
+    if (!n) {
+      box.innerHTML = '<div class="empty">Abhi koi phone juda nahi hai.<br>Teacher apne phone par room code + PIN daal kar login karega, phir yahan dikhega.</div>';
+      return;
+    }
+    box.innerHTML = state.devices.map(function (d) {
+      var st = d.status === "ok" ? "Approved" : d.status === "blocked" ? "Blocked" : "Approval baaki";
+      var acts = '';
+      if (d.status !== "ok") acts += '<button class="btn btn--sm btn--gold" data-act="ok">Approve</button>';
+      if (d.status === "ok") acts += '<button class="btn btn--sm" data-act="ring">Ring</button>';
+      acts += '<button class="btn btn--sm btn--danger" data-act="block">Block</button>';
+      return '<div class="device" data-id="' + esc(d.id) + '">' +
+        '<div class="dev-top"><div class="avatar">' + esc(initials(d.name)) + '</div>' +
+        '<div class="meta"><div class="nm">' + esc(d.name) + '</div>' +
+        '<div class="rl"><span class="badge ' + d.status + '">' + st + '</span>' + esc(ago(d.lastSeen || Date.now())) + '</div></div></div>' +
+        '<div class="dev-acts">' + acts + '</div></div>';
+    }).join("");
+  }
+
+  function renderStaffMode() {
+    var card = document.getElementById("staffStatusCard");
+    if (!card) return;
+    var isStaff = state.role === "staff";
+    card.style.display = isStaff ? "" : "none";
+    if (!isStaff) return;
+    var s = state.myStatus;
+    var txt = s === "ok" ? "Approved — bell aane par bajegi"
+      : s === "blocked" ? "Access band hai. Owner se baat karein."
+      : "Owner ki approval ka intezaar…";
+    var dot = document.getElementById("staffModeDot");
+    if (dot) dot.className = "net-dot " + (s === "ok" ? "ok" : s === "blocked" ? "err" : "busy");
+    var t = document.getElementById("staffModeText");
+    if (t) t.textContent = txt;
+    var nm = document.getElementById("staffModeName");
+    if (nm) nm.textContent = state.myName || "—";
+    var rm = document.getElementById("staffModeRoom");
+    if (rm) rm.textContent = state.room || "—";
+  }
+
+  function applyRole() {
+    var isStaff = state.role === "staff";
+    ["devicesCard", "accessCard", "loginCard", "ringAllCard"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = isStaff ? "none" : "";
+    });
+    var staffTab = document.querySelector('.tab[data-view="staff"]');
+    if (staffTab) staffTab.style.display = isStaff ? "none" : "";
+    if (isStaff && document.getElementById("view-staff").classList.contains("active")) {
+      document.querySelector('.tab[data-view="ring"]').click();
+    }
+    renderStaffMode();
+    renderDevices();
+  }
+
+  /* ---- wiring ---- */
+  document.getElementById("ringAllBtn").addEventListener("click", ringAllDevices);
+  document.getElementById("deviceList").addEventListener("click", function (e) {
+    var b = e.target.closest("[data-act]");
+    if (!b) return;
+    var row = e.target.closest(".device");
+    if (!row) return;
+    var id = row.getAttribute("data-id");
+    var act = b.getAttribute("data-act");
+    if (act === "ok") approveDevice(id);
+    else if (act === "ring") ringOneDevice(id);
+    else if (act === "block") blockDevice(id);
+  });
+  document.getElementById("loginBtn").addEventListener("click", staffLogin);
+  document.getElementById("staffLogoutBtn").addEventListener("click", staffLogout);
+  document.getElementById("savePin").addEventListener("click", function () {
+    var v = (document.getElementById("pinInput").value || "").replace(/\D/g, "");
+    if (v && v.length < 4) { toast("PIN kam se kam 4 digit ka rakhein"); return; }
+    state.pin = v;
+    save();
+    toast(v ? "PIN save ho gaya" : "PIN hata diya");
+  });
+  document.getElementById("copyLinkBtn").addEventListener("click", function () {
+    var link = staffLink();
+    if (link.indexOf("http") !== 0) copyText(link, "Room code copy ho gaya");
+    else copyText(link, "Staff link copy ho gaya");
+  });
+  document.getElementById("newRoomBtn").addEventListener("click", function () {
+    if (!confirm("Naya room code banega — purane code se jude sabhi phones hat jayenge. Aage badhein?")) return;
+    state.room = makeRoom();
+    state.devices = [];
+    save();
+    renderRemoteUI();
+    startPolling();
+    toast("Naya room code ban gaya");
+  });
+  document.getElementById("testRemoteBtn").addEventListener("click", testRemote);
+  document.getElementById("bgAlertBtn").addEventListener("click", function () {
+    window.open(NTFY + "/" + encodeURIComponent(ensureRoom()), "_blank", "noopener");
+  });
+
+  function testRemote() {
+    ensureRoom();
+    setNet("busy", "Server test chal raha hai…");
+    send("TEST " + Date.now())
+      .then(function () {
+        return fetch(NTFY + "/" + encodeURIComponent(state.room) + "/json?poll=1&since=all", { cache: "no-store" });
+      })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+      .then(function (txt) {
+        var ok = txt.indexOf("TEST") >= 0;
+        setNet(ok ? "ok" : "err", ok ? "Server chal raha hai — bhejna aur padhna dono theek" : "Bheja gaya, par wapas nahi aaya");
+        toast(ok ? "Server OK" : "Server se jawab nahi aaya");
+      })
+      .catch(function (e) {
+        setNet("err", "Server tak nahi pahuncha (" + e.message + ") — internet check karein");
+      });
+  }
+
+  function copyText(text, okMsg) {
+    try {
+      navigator.clipboard.writeText(text).then(function () { toast(okMsg); }, function () { fallbackCopy(text); });
+    } catch (e) { fallbackCopy(text); }
+  }
+
+  function renderRemoteUI() {
+    ensureRoom();
+    var rc = document.getElementById("roomCode");
+    if (rc) rc.textContent = state.room;
+    var pin = document.getElementById("pinInput");
+    if (pin) pin.value = state.pin || "";
+    var lr = document.getElementById("loginRoom");
+    if (lr && !lr.value) lr.value = state.room;
+    applyRole();
+    if (!pollTimer) startPolling();
+  }
+
+  /* ============================================================
+     HEADER / CLOCK
+     ============================================================ */
+  function tick() {
+    var d = new Date();
+    $("#clock").textContent = pad(d.getHours()) + ":" + pad(d.getMinutes());
+    checkAlarms();
+    updateNextStrip();
+  }
+
+  /* ============================================================
+     TABS
+     ============================================================ */
+  document.querySelectorAll(".tab").forEach(function (t) {
+    t.addEventListener("click", function () {
+      document.querySelectorAll(".tab").forEach(function (x) { x.classList.remove("active"); });
+      document.querySelectorAll(".view").forEach(function (x) { x.classList.remove("active"); });
+      t.classList.add("active");
+      $("#view-" + t.getAttribute("data-view")).classList.add("active");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+
+  /* ============================================================
+     RING BUTTON
+     ============================================================ */
+  $("#ringBtn").addEventListener("click", function () {
+    var sound = $("#soundSel").value;
+    var dur = parseInt($("#durSel").value, 10);
+    startRing(sound, dur, state.coaching, "Bell baj rahi hai — staff ko bhejein");
+  });
+  $("#stopBtn").addEventListener("click", function () { stopRing(); });
+  $("#testBtn").addEventListener("click", function () {
+    startRing($("#soundSel").value, 5, state.coaching, "Test — 5 second");
+  });
+
+  /* ============================================================
+     SETUP
+     ============================================================ */
+  function renderSetup() {
+    $("#coachName").value = state.coaching;
+    $("#brandName").textContent = state.coaching;
+    document.title = state.coaching + " — Staff Bell";
+    $("#kStaff").textContent = state.staff.length;
+    $("#kAlarms").textContent = state.alarms.length;
+    var kStore = $("#kStore");
+    if (kStore) {
+      kStore.textContent = storageMode === "local" ? "Isi phone me save"
+        : storageMode === "idb" ? "Browser database me save"
+        : (storageMode === "session" ? "Sirf is session tak" : "Save nahi ho raha");
+    }
+  }
+  $("#saveName").addEventListener("click", function () {
+    var v = $("#coachName").value.trim();
+    if (!v) { toast("Naam khali nahi ho sakta"); return; }
+    state.coaching = v; save(); renderSetup(); toast("Naam save ho gaya");
+  });
+  $("#notifBtn").addEventListener("click", function () {
+    if (!("Notification" in window)) { toast("Is browser me notification nahi hai"); return; }
+    Notification.requestPermission().then(function (p) {
+      toast(p === "granted" ? "Notification on" : "Permission nahi mili");
+    });
+  });
+  $("#exportBtn").addEventListener("click", function () {
+    var data = JSON.stringify(state);
+    try {
+      navigator.clipboard.writeText(data).then(function () { toast("Backup clipboard me copy ho gaya"); },
+        function () { fallbackCopy(data); });
+    } catch (e) { fallbackCopy(data); }
+  });
+  function fallbackCopy(data) {
+    var ta = document.createElement("textarea");
+    ta.value = data; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); toast("Backup copy ho gaya"); } catch (e) { toast("Copy nahi hua"); }
+    document.body.removeChild(ta);
+  }
+  $("#importBtn").addEventListener("click", function () {
+    var v = prompt("Backup text paste karein:");
+    if (!v) return;
+    try {
+      var d = JSON.parse(v);
+      if (!d || !Array.isArray(d.staff)) throw new Error("bad");
+      state.coaching = d.coaching || state.coaching;
+      state.staff = d.staff;
+      state.alarms = Array.isArray(d.alarms) ? d.alarms : [];
+      state.settings = Object.assign(state.settings, d.settings || {});
+      save(); renderAll(); toast("Backup restore ho gaya");
+    } catch (e) { toast("Backup galat hai"); }
+  });
+  $("#dlBtn").addEventListener("click", function () {
+    try {
+      var blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = "usp-staff-backup.json";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(url); a.remove(); }, 1500);
+      toast("Backup file download ho gayi");
+    } catch (e) { toast("Download nahi hua"); }
+  });
+  $("#upBtn").addEventListener("click", function () { $("#upFile").click(); });
+  $("#upFile").addEventListener("change", function () {
+    var f = this.files && this.files[0];
+    if (!f) return;
+    var fr = new FileReader();
+    fr.onload = function () {
+      try {
+        var d = JSON.parse(String(fr.result));
+        if (!d || !Array.isArray(d.staff)) throw new Error("bad");
+        state.coaching = d.coaching || state.coaching;
+        state.staff = d.staff;
+        state.alarms = Array.isArray(d.alarms) ? d.alarms : [];
+        state.settings = Object.assign(state.settings, d.settings || {});
+        save();
+        renderAll();
+        toast("Backup restore ho gaya \u2014 " + state.staff.length + " staff");
+      } catch (e) { toast("Yeh backup file sahi nahi hai"); }
+    };
+    fr.readAsText(f);
+    this.value = "";
+  });
+
+  /* ---------- self check ---------- */
+  function flashRow(id) {
+    setTimeout(function () {
+      var row = document.querySelector('.staff[data-id="' + id + '"]');
+      if (!row) return;
+      row.classList.add("flash");
+      try { row.scrollIntoView({ block: "center", behavior: "smooth" }); } catch (e) { row.scrollIntoView(); }
+      setTimeout(function () { row.classList.remove("flash"); }, 1700);
+    }, 60);
+  }
+
+  function runSelfCheck() {
+    var out = $("#checkOut");
+    if (!out) return;
+    var rows = [];
+    function add(label, ok, extra) {
+      rows.push('<div class="check"><span class="flag ' + (ok ? "yes" : "no") + '">' +
+        (ok ? "OK" : "GADBAD") + '</span><span>' + esc(label) +
+        (extra ? ' <b>' + esc(String(extra)) + '</b>' : '') + '</span></div>');
+    }
+
+    // 1. asli add test (temp entry bana kar hata dete hain)
+    var before = state.staff.length;
+    var oldName = $("#sName").value, oldPhone = $("#sPhone").value, oldRole = $("#sRole").value;
+    var testName = "Test " + Math.random().toString(36).slice(2, 6);
+    var added = false;
+    try {
+      $("#sName").value = testName;
+      $("#sPhone").value = "";
+      addStaff();
+      added = state.staff.length === before + 1;
+      if (added) {
+        state.staff = state.staff.filter(function (x) { return x.name !== testName; });
+        save(); renderStaff();
+      }
+    } catch (e) { lastError = e.message; }
+    editingStaffId = null;
+    $("#sName").value = oldName;
+    $("#sPhone").value = oldPhone;
+    $("#sRole").value = oldRole;
+    $("#staffSubmit").textContent = "Staff add karein";
+    $("#staffMsg").className = "form-msg";
+
+    add("JavaScript chal raha hai", true, "build " + APP_VERSION);
+    add("Staff add ho raha hai", added, added ? "button theek chal raha hai" : "button kaam nahi kar raha");
+
+    var stOk = false, stInfo = storageMode;
+    try {
+      backend.setItem("__usp_t2", "1");
+      stOk = backend.getItem("__usp_t2") === "1";
+      backend.removeItem("__usp_t2");
+    } catch (e) { stInfo = "blocked"; }
+    add("Data phone me save ho raha hai", stOk, stOk ? storageMode : "storage band hai (" + stInfo + ")");
+
+    add("Awaaz support", !!(window.AudioContext || window.webkitAudioContext), "AudioContext");
+    add("File kahan se khuli", true, location.protocol === "file:" ? "file:// (offline file)" : location.protocol + "//" + location.host);
+    add("Staff list", true, state.staff.length + " staff, " + state.alarms.length + " alarm");
+    if (lastError) add("Aakhri error", false, lastError);
+
+    out.innerHTML = rows.join("");
+    out.style.display = "block";
+    toast("Check poora hua");
+  }
+
+  $("#checkBtn").addEventListener("click", runSelfCheck);
+
+  document.getElementById("warnClose").addEventListener("click", function () {
+    warnDismissed = true;
+    var box = document.getElementById("storeWarn");
+    if (box) box.style.display = "none";
+  });
+  document.getElementById("warnBackup").addEventListener("click", function () {
+    document.getElementById("dlBtn").click();
+  });
+
+  $("#resetBtn").addEventListener("click", function () {
+    if (!confirm("Staff aur alarms sab mit jayenge. Pakka?")) return;
+    state.staff = []; state.alarms = [];
+    state.coaching = "UNBEATABLE SUCCESS POINT";
+    state.settings = { sound: "bell", duration: 30 };
+    save(); renderAll(); toast("Data mita diya");
+  });
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+  function renderAll() {
+    renderStaff();
+    renderAlarms();
+    renderSetup();
+    renderDayChips();
+  }
+
+  pickBackend();
+  load();
+  renderAll();
+  showStoreWarn();
+  bootIdb();
+  var verLine = $("#verLine");
+  if (verLine) verLine.textContent = "Build v" + APP_VERSION + " · " + new Date().toLocaleDateString("en-GB");
+
+  // staff link se aaya? (?room=CODE) → room bhar do, login form me
+  try {
+    var mq = (location.search || "").match(/[?&]room=([A-Za-z0-9_-]+)/);
+    if (mq && state.role !== "staff") {
+      state.room = decodeURIComponent(mq[1]);
+      save();
+    }
+  } catch (e) { /* ignore */ }
+  ensureRoom();
+  renderRemoteUI();
+  startPolling();
+  if (state.role === "staff") ping();
+  $("#soundSel").value = state.settings.sound || "bell";
+  $("#durSel").value = String(state.settings.duration || 30);
+  $("#soundSel").addEventListener("change", function () {
+    state.settings.sound = $("#soundSel").value; save();
+  });
+  $("#durSel").addEventListener("change", function () {
+    state.settings.duration = parseInt($("#durSel").value, 10); save();
+  });
+
+  tick();
+  setInterval(tick, 1000);
+
+  // unlock audio on first touch so alarm can play later
+  var unlocked = false;
+  function unlock() {
+    if (unlocked) return;
+    unlocked = true;
+    var ctx = getCtx();
+    if (ctx && ctx.state === "suspended") ctx.resume();
+  }
+  ["touchstart", "click", "keydown"].forEach(function (ev) {
+    document.addEventListener(ev, unlock, { once: true, passive: true });
+  });
+
+  // re-acquire wake lock when coming back
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") {
+      updateNextStrip();
+      if (audio.active) requestWakeLock();
+      pollOnce();
+      ping();
+    }
+  });
+})();
+</script>
+</body>
+</html>
